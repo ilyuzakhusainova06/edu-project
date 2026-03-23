@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Модуль 4: Интерактивные платформы — Педагог 4.0</title>
+  <title>Модуль 4 — Педагог 4.0</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,9 +33,9 @@
         Назад к курсу
       </a>
       <div class="fade-in">
-        <div class="module-header__number">Модуль 4</div>
-        <h1 class="module-header__title">Интерактивные платформы</h1>
-        <p class="module-header__desc">LearningApps, Wordwall и аналоги — создание интерактивных заданий и их интеграция в урок.</p>
+        <div class="module-header__number" id="module-number">Модуль 4</div>
+        <h1 class="module-header__title" id="module-title">Загрузка...</h1>
+        <p class="module-header__desc" id="module-desc"></p>
       </div>
     </div>
   </section>
@@ -45,11 +45,7 @@
 
       <div class="fade-in">
         <span class="section__label">Цели модуля</span>
-        <ul class="goals-list">
-          <li>Познакомиться с платформами для создания интерактивных заданий</li>
-          <li>Научиться создавать ЦОР на базе LearningApps и аналогов</li>
-          <li>Освоить интеграцию интерактивных заданий в структуру урока</li>
-        </ul>
+        <ul class="goals-list" id="module-goals"></ul>
       </div>
 
       <div class="fade-in">
@@ -57,26 +53,20 @@
         <div class="accordion">
           <div class="accordion__item open">
             <button class="accordion__trigger">
-              LearningApps и аналоги
+              Теория
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="accordion__content" style="max-height:300px">
-              <div class="accordion__content-inner">
-                <p>LearningApps.org — бесплатная платформа для создания интерактивных упражнений: викторины, кроссворды, пазлы, задания на сопоставление и классификацию.</p>
-                <p>Альтернативы: Wordwall, Quizlet, Kahoot!, Padlet. Каждая платформа имеет свои преимущества в зависимости от типа задания и возраста учеников.</p>
-              </div>
+              <div class="accordion__content-inner" id="module-theory"></div>
             </div>
           </div>
           <div class="accordion__item">
             <button class="accordion__trigger">
-              Интеграция в урок
+              Педагогический акцент
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
             </button>
             <div class="accordion__content">
-              <div class="accordion__content-inner">
-                <p>Интерактивные задания можно использовать на разных этапах урока: мотивация (вводная викторина), закрепление (кроссворд по теме), контроль (тест), рефлексия (интерактивный опрос).</p>
-                <p>Важно не перегружать урок цифровыми инструментами — они должны дополнять, а не заменять живое общение с учителем.</p>
-              </div>
+              <div class="accordion__content-inner" id="module-pedagogy"></div>
             </div>
           </div>
         </div>
@@ -85,12 +75,7 @@
       <div class="fade-in">
         <div class="highlight-box">
           <div class="highlight-box__title">Практическое задание</div>
-          <p>Разработка ЦОР для урока в начальной школе:</p>
-          <ul>
-            <li>Создать 3 интерактивных упражнения на LearningApps</li>
-            <li>Указать этап урока для каждого упражнения</li>
-            <li>Подготовить краткую инструкцию для ученика</li>
-          </ul>
+          <div id="module-practice"></div>
         </div>
       </div>
 
@@ -100,10 +85,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
             Вопросы для рефлексии
           </div>
-          <ol>
-            <li>Какие типы интерактивных заданий наиболее эффективны для младших школьников?</li>
-            <li>Как найти баланс между цифровыми и традиционными методами обучения?</li>
-          </ol>
+          <ol id="module-reflection"></ol>
         </div>
       </div>
 
@@ -132,5 +114,9 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/module-loader.js"></script>
+  <script>
+    loadModule('content/modules/интерактивные-платформы.md');
+  </script>
 </body>
 </html>
