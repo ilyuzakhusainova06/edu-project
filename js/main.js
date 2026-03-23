@@ -57,19 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* --- Progress Bar Animation --- */
-  document.querySelectorAll('.progress-bar__fill').forEach(bar => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        bar.classList.add('animate');
-        bar.style.width = bar.dataset.width || '0%';
-        observer.unobserve(bar);
-      }
-    }, { threshold: 0.5 });
-    observer.observe(bar);
-  });
-
-  /* --- Active Nav Link --- */
+/* --- Active Nav Link --- */
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__links a').forEach(link => {
     const href = link.getAttribute('href');

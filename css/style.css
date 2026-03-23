@@ -462,39 +462,6 @@ body::before {
 }
 
 /* ===== PROGRESS BAR ===== */
-.progress-wrapper {
-  margin-bottom: var(--sp-lg);
-}
-
-.progress-label {
-  display: flex;
-  justify-content: space-between;
-  font-family: var(--ff-heading);
-  font-size: var(--fs-small);
-  font-weight: 500;
-  color: var(--clr-text-mid);
-  margin-bottom: var(--sp-xs);
-}
-
-.progress-bar {
-  width: 100%;
-  height: 10px;
-  background: var(--clr-bg-warm);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.progress-bar__fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-l));
-  border-radius: 100px;
-  transition: width 1s var(--ease-out);
-  width: 0;
-}
-
-.progress-bar__fill.animate {
-  /* width set via inline style */
-}
 
 /* ===== ACCORDION ===== */
 .accordion { display: flex; flex-direction: column; gap: var(--sp-sm); }
@@ -750,127 +717,7 @@ body::before {
   font-size: var(--fs-small);
 }
 
-/* ===== PROFILE ===== */
-.profile-header {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-md);
-  margin-bottom: var(--sp-lg);
-}
 
-.profile-avatar {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--clr-primary-l), var(--clr-primary));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-family: var(--ff-heading);
-  font-size: 1.6rem;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-
-.profile-info__name {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-h2);
-  font-weight: 600;
-}
-
-.profile-info__role {
-  color: var(--clr-text-mid);
-  font-size: var(--fs-small);
-}
-
-.stat-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--sp-sm);
-  margin-bottom: var(--sp-lg);
-}
-
-.stat-card {
-  background: var(--clr-surface);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--r-md);
-  padding: var(--sp-md);
-  text-align: center;
-}
-
-.stat-card__value {
-  font-family: var(--ff-heading);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--clr-primary);
-}
-
-.stat-card__label {
-  font-size: var(--fs-small);
-  color: var(--clr-text-mid);
-}
-
-.module-status-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-sm);
-}
-
-.module-status {
-  display: flex;
-  align-items: center;
-  gap: var(--sp-sm);
-  padding: var(--sp-sm) var(--sp-md);
-  background: var(--clr-surface);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--r-md);
-}
-
-.module-status__check {
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.module-status__check--done {
-  background: var(--clr-primary);
-  color: #fff;
-}
-
-.module-status__check--pending {
-  background: var(--clr-bg-warm);
-  border: 2px solid var(--clr-border);
-}
-
-.module-status__check svg { width: 14px; height: 14px; }
-
-.module-status__name {
-  font-family: var(--ff-heading);
-  font-weight: 500;
-}
-
-.module-status__badge {
-  margin-left: auto;
-  font-family: var(--ff-heading);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 100px;
-}
-
-.module-status__badge--done {
-  color: var(--clr-primary);
-  background: var(--clr-teal-soft);
-}
-
-.module-status__badge--progress {
-  color: var(--clr-accent);
-  background: rgba(232,131,107,0.1);
-}
 
 /* ===== FOOTER ===== */
 .footer {
@@ -962,11 +809,9 @@ body::before {
 
   .cards-grid { grid-template-columns: 1fr; }
   .outcomes { grid-template-columns: 1fr; }
-  .stat-cards { grid-template-columns: 1fr 1fr; }
 
   .footer__inner { flex-direction: column; }
 }
 
 @media (max-width: 480px) {
-  .stat-cards { grid-template-columns: 1fr; }
 }
