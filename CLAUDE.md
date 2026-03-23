@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**ЦифроПед** — a static educational platform for future primary school teachers, teaching digital tools for modern classrooms. Russian-language content. Hosted on Netlify.
+**Педагог 4.0** — a static educational platform for future primary school teachers, teaching digital tools for modern classrooms. Russian-language content. Hosted on Netlify.
 
 ## Architecture
 

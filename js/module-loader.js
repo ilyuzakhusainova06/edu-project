@@ -101,7 +101,7 @@ function loadModule(contentPath) {
       if (data.number) {
         const numEl = el('module-number');
         if (numEl) numEl.textContent = 'Модуль ' + data.number;
-        document.title = 'Модуль ' + data.number + ': ' + (data.title || '') + ' — ЦифроПед';
+        document.title = 'Модуль ' + data.number + ': ' + (data.title || '') + ' — Педагог 4.0';
       }
       if (data.title) {
         const titleEl = el('module-title');
