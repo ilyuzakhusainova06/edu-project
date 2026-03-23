@@ -36,100 +36,8 @@
   </section>
 
   <section class="section">
-    <div class="container">
-
-      <!-- Презентации -->
-      <div class="tools-category fade-in">
-        <h2 class="tools-category__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          Презентации
-        </h2>
-        <div class="cards-grid">
-          <div class="tool-card">
-            <div class="tool-card__name">Microsoft PowerPoint</div>
-            <div class="tool-card__desc">Классический инструмент для создания презентаций с анимациями, триггерами и интерактивными элементами</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Google Slides</div>
-            <div class="tool-card__desc">Облачные презентации с возможностью совместной работы в реальном времени</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Prezi</div>
-            <div class="tool-card__desc">Нелинейные презентации с эффектом масштабирования и динамичной навигацией</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Графика -->
-      <div class="tools-category fade-in">
-        <h2 class="tools-category__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          Графика
-        </h2>
-        <div class="cards-grid">
-          <div class="tool-card">
-            <div class="tool-card__name">Canva</div>
-            <div class="tool-card__desc">Онлайн-редактор с шаблонами для создания инфографики, плакатов, карточек и социальных медиа</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">GIMP</div>
-            <div class="tool-card__desc">Бесплатный растровый графический редактор с профессиональными возможностями</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Paint.NET</div>
-            <div class="tool-card__desc">Простой и интуитивный графический редактор для базовой обработки изображений</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Онлайн-платформы -->
-      <div class="tools-category fade-in">
-        <h2 class="tools-category__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
-          Онлайн-платформы
-        </h2>
-        <div class="cards-grid">
-          <div class="tool-card">
-            <div class="tool-card__name">LearningApps</div>
-            <div class="tool-card__desc">Платформа для создания интерактивных упражнений: викторины, кроссворды, пазлы</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Wordwall</div>
-            <div class="tool-card__desc">Создание игровых заданий с множеством шаблонов: колесо фортуны, лабиринт, гонка</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Kahoot!</div>
-            <div class="tool-card__desc">Платформа для проведения интерактивных викторин и опросов в реальном времени</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Padlet</div>
-            <div class="tool-card__desc">Виртуальная доска для совместной работы, сбора идей и организации материалов</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Облачные сервисы -->
-      <div class="tools-category fade-in">
-        <h2 class="tools-category__title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
-          Облачные сервисы
-        </h2>
-        <div class="cards-grid">
-          <div class="tool-card">
-            <div class="tool-card__name">Google Workspace</div>
-            <div class="tool-card__desc">Набор облачных инструментов: Документы, Таблицы, Формы, Класс — для организации учебного процесса</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Яндекс 360</div>
-            <div class="tool-card__desc">Российские облачные сервисы: Диск, Документы, Формы — для хранения и совместной работы</div>
-          </div>
-          <div class="tool-card">
-            <div class="tool-card__name">Облако Mail.ru</div>
-            <div class="tool-card__desc">Облачное хранилище для размещения и обмена учебными материалами</div>
-          </div>
-        </div>
-      </div>
-
+    <div class="container" id="library-content">
+      Загрузка...
     </div>
   </section>
 
@@ -144,5 +52,9 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/library-loader.js"></script>
+  <script>
+    loadLibrary();
+  </script>
 </body>
 </html>
