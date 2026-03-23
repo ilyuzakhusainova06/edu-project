@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль — ЦифроПед</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="14" r="12"/><path d="M9 14l3 3 7-7"/></svg>
+        ЦифроПед
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="course.html">Курс</a></li>
+        <li><a href="library.html">Библиотека</a></li>
+        <li><a href="safety.html">Безопасность</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Меню" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <section class="module-header">
+    <div class="container">
+      <div class="fade-in">
+        <div class="profile-header">
+          <div class="profile-avatar">АИ</div>
+          <div class="profile-info">
+            <div class="profile-info__name">Анна Иванова</div>
+            <div class="profile-info__role">Студент, 3 курс — Педагогическое образование</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="stat-cards fade-in">
+        <div class="stat-card">
+          <div class="stat-card__value">2</div>
+          <div class="stat-card__label">Завершено модулей</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">40%</div>
+          <div class="stat-card__label">Общий прогресс</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">3</div>
+          <div class="stat-card__label">Загружено работ</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">12ч</div>
+          <div class="stat-card__label">Время обучения</div>
+        </div>
+      </div>
+
+      <div class="fade-in">
+        <span class="section__label">Прогресс по модулям</span>
+        <div class="progress-wrapper" style="margin-bottom:var(--sp-md)">
+          <div class="progress-label"><span>Общий прогресс</span><span>40%</span></div>
+          <div class="progress-bar">
+            <div class="progress-bar__fill" data-width="40%"></div>
+          </div>
+        </div>
+
+        <ul class="module-status-list">
+          <li class="module-status">
+            <div class="module-status__check module-status__check--done">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span class="module-status__name">Модуль 1: Интерактивные презентации</span>
+            <span class="module-status__badge module-status__badge--done">Завершён</span>
+          </li>
+          <li class="module-status">
+            <div class="module-status__check module-status__check--done">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span class="module-status__name">Модуль 2: Мультимедиа и графика</span>
+            <span class="module-status__badge module-status__badge--done">Завершён</span>
+          </li>
+          <li class="module-status">
+            <div class="module-status__check module-status__check--pending"></div>
+            <span class="module-status__name">Модуль 3: Интернет-технологии</span>
+            <span class="module-status__badge module-status__badge--progress">В процессе</span>
+          </li>
+          <li class="module-status">
+            <div class="module-status__check module-status__check--pending"></div>
+            <span class="module-status__name">Модуль 4: Интерактивные платформы</span>
+            <span class="module-status__badge" style="color:var(--clr-text-light);background:var(--clr-bg-warm)">Не начат</span>
+          </li>
+          <li class="module-status">
+            <div class="module-status__check module-status__check--pending"></div>
+            <span class="module-status__name">Итоговый проект</span>
+            <span class="module-status__badge" style="color:var(--clr-text-light);background:var(--clr-bg-warm)">Не начат</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="fade-in" style="margin-top:var(--sp-lg)">
+        <span class="section__label">Загруженные работы</span>
+        <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr))">
+          <div class="tool-card">
+            <div class="tool-card__name">Презентация-игра «Весёлый счёт»</div>
+            <div class="tool-card__desc">Модуль 1 &middot; Загружено 10.03.2026</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card__name">Набор карточек «Алфавит»</div>
+            <div class="tool-card__desc">Модуль 2 &middot; Загружено 17.03.2026</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-card__name">Инфографика «Времена года»</div>
+            <div class="tool-card__desc">Модуль 2 &middot; Загружено 18.03.2026</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__brand-name">ЦифроПед</div>
+        <p class="footer__brand-desc">Образовательная платформа для будущих учителей начальной школы</p>
+      </div>
+      <p class="footer__copy">&copy; 2026 ЦифроПед. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

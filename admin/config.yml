@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+
+collections:
+  - name: "modules"
+    label: "Модули"
+    folder: "content/modules"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Номер модуля", name: "number", widget: "number" }
+      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Цели", name: "goals", widget: "list", field: { label: "Цель", name: "goal", widget: "string" } }
+      - { label: "Теория", name: "theory", widget: "markdown" }
+      - { label: "Педагогический акцент", name: "pedagogy", widget: "markdown" }
+      - { label: "Практика", name: "practice", widget: "markdown" }
+      - { label: "Рефлексия", name: "reflection", widget: "list", field: { label: "Вопрос", name: "question", widget: "string" } }
+
+  - name: "library"
+    label: "Библиотека"
+    folder: "content/library"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Название", name: "title", widget: "string" }
+      - { label: "Категория", name: "category", widget: "select", options: ["Презентации", "Графика", "Онлайн-платформы", "Облачные сервисы"] }
+      - { label: "Описание", name: "description", widget: "text" }
+
+  - name: "safety"
+    label: "Безопасность"
+    folder: "content/safety"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Заголовок", name: "title", widget: "string" }
+      - { label: "Тег", name: "tag", widget: "string" }
+      - { label: "Содержание", name: "body", widget: "markdown" }
