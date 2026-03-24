@@ -16,13 +16,6 @@ function parseYamlFrontmatter(text) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    // List item under a key
-    if (/^  - /.test(line) && currentKey) {
-      if (!Array.isArray(data[currentKey])) data[currentKey] = [];
-      data[currentKey].push(line.replace(/^  - /, ''));
-      continue;
-    }
-
     // Multiline continuation (indented with spaces, part of >- or quoted block)
     if (isMultiline && /^  \S/.test(line)) {
       let trimmed = line.trim();
@@ -54,6 +47,13 @@ function parseYamlFrontmatter(text) {
       data[currentKey] = multilineValue.trim();
       isMultiline = false;
       multilineValue = '';
+    }
+
+    // List item under a key (only when not in multiline mode)
+    if (/^  - /.test(line) && currentKey) {
+      if (!Array.isArray(data[currentKey])) data[currentKey] = [];
+      data[currentKey].push(line.replace(/^  - /, ''));
+      continue;
     }
 
     // Key: value pair
