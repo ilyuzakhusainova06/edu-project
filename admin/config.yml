@@ -2,10 +2,6 @@ backend:
   name: github
   repo: ilyuzakhusainova06/edu-project
   branch: main
-  auth_type: pkce
-  app_id: Ov23lij2OQvOLikvaG6A
-  base_url: https://github.com
-  auth_endpoint: login/oauth/authorize
 
 site_url: https://ilyuzakhusainova06.github.io/edu-project/
 
