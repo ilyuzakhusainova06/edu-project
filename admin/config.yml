@@ -2,7 +2,8 @@ backend:
   name: github
   repo: ilyuzakhusainova06/edu-project
   branch: main
-  base_url: https://decapcms-oauth.netlify.app
+  auth_type: pkce
+  app_id: Ov23lij2OQvOLikvaG6A
 
 media_folder: "img"
 
