@@ -23,12 +23,22 @@ function parseYamlFrontmatter(text) {
       continue;
     }
 
-    // Multiline continuation (indented with spaces, part of >- block)
+    // Multiline continuation (indented with spaces, part of >- or quoted block)
     if (isMultiline && /^  \S/.test(line)) {
-      if (line.trim() === '') {
+      let trimmed = line.trim();
+      // Check for closing quote of a quoted multiline value
+      if (/["']$/.test(trimmed)) {
+        trimmed = trimmed.slice(0, -1); // remove closing quote
+        multilineValue += (multilineValue.endsWith('\n\n') ? '' : ' ') + trimmed;
+        data[currentKey] = multilineValue.trim();
+        isMultiline = false;
+        multilineValue = '';
+        continue;
+      }
+      if (trimmed === '') {
         multilineValue += '\n\n';
       } else {
-        multilineValue += (multilineValue.endsWith('\n\n') ? '' : ' ') + line.trim();
+        multilineValue += (multilineValue.endsWith('\n\n') ? '' : ' ') + trimmed;
       }
       continue;
     }
@@ -56,8 +66,13 @@ function parseYamlFrontmatter(text) {
         multilineValue = '';
       } else if (val === '') {
         data[currentKey] = [];
+      } else if (/^["']/.test(val) && !(/["']$/.test(val) && val.length > 1)) {
+        // Opening quote without closing quote — start quoted multiline
+        isMultiline = true;
+        multilineValue = val.slice(1); // remove opening quote
       } else {
-        data[currentKey] = val;
+        // Strip surrounding quotes if present
+        data[currentKey] = val.replace(/^["'](.*)["']$/, '$1');
       }
     }
   }
