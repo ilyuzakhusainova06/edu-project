@@ -106,8 +106,8 @@ function inlineMarkdown(text) {
 }
 
 function loadModule(contentPath) {
-  fetch(contentPath)
-    .then(r => r.text())
+  fetch(encodeURI(contentPath))
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(text => {
       const data = parseYamlFrontmatter(text);
 
