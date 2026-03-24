@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ilyuzakhusainova06/edu-project
   branch: main
+  base_url: https://decapcms-oauth.netlify.app
 
 media_folder: "img"
 
